@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Trabajador } from 'src/app/Modelos/trabajador';
 
 @Component({
@@ -8,6 +8,19 @@ import { Trabajador } from 'src/app/Modelos/trabajador';
 })
 export class CardTrabajadorComponent {
 @Input() trabajador!: Trabajador;
+@Output() likeTrabajador = new EventEmitter<number>();
+@Output() unlikeTrabajador = new EventEmitter<number>();
+@Output() borraTrabajador = new EventEmitter<number>();
 
-metodo(){}
+like(trabajador: Trabajador){
+  this.likeTrabajador.emit(trabajador.id);
+}
+
+unlike(trabajador: Trabajador){
+  this.unlikeTrabajador.emit(trabajador.id);
+}
+
+eliminar(trabajador: Trabajador){
+  this.borraTrabajador.emit(trabajador.id);
+}
 }

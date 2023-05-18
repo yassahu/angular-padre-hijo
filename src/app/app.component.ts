@@ -11,14 +11,24 @@ export class AppComponent {
 
   trabajadores: Array<Trabajador> = TRABAJADORES;
 
-  verTrabajadores(){
-    console.log(this.trabajadores);
+  sumaVoto(id:number){
+    let pos = this.trabajadores.findIndex(t => t.id == id);
+    this.trabajadores[pos].votos++;
   }
 
-  sumaVoto(id:number){}
+  restaVoto(id:number){
+    let pos = this.trabajadores.findIndex(t => t.id == id);
+    if(this.trabajadores[pos].votos > 0){
+      this.trabajadores[pos].votos--;
+    } else{
+      alert("No se pueden restar votos.")
+    }
 
-  restaVoto(id:number){}
+  }
 
-  borrar(id:number){}
+  borrar(id:number){
+    let pos = this.trabajadores.findIndex(t => t.id == id);
+    this.trabajadores.splice(pos, 1);
+  }
 
 }
