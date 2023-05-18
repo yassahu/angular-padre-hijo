@@ -23,7 +23,6 @@ export class AppComponent {
     } else{
       alert("No se pueden restar votos.")
     }
-
   }
 
   borrar(id:number){
