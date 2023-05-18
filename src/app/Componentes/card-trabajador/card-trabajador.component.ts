@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Trabajador } from 'src/app/Modelos/trabajador';
 
 @Component({
   selector: 'app-card-trabajador',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-trabajador.component.css']
 })
 export class CardTrabajadorComponent {
+@Input() trabajador!: Trabajador;
 
+metodo(){}
 }
