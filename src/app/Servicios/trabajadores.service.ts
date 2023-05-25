@@ -32,4 +32,8 @@ export class TrabajadoresService {
     let pos = this.trabajadores.findIndex(t => t.id == id);
     this.trabajadores.splice(pos, 1);
   }
+
+  anyadirTrabajador(trabajador:Trabajador){
+    this.trabajadores.push(trabajador);
+  }
 }

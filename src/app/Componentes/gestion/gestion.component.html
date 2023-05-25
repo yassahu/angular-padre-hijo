@@ -1,0 +1,28 @@
+<button routerLink="/anyadir-trabajador">Añadir trabajador</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Cargo</th>
+      <th>Votos</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trabajador of trabajadores">
+      <td>{{trabajador.id}}</td>
+      <td>{{trabajador.nombre}}</td>
+      <td>{{trabajador.cargo}}</td>
+      <td>{{trabajador.votos}}</td>
+      <td><button (click)="sumarVoto(trabajador.id)">+</button></td>
+      <td><button (click)="restarVoto(trabajador.id)">-</button></td>
+      <td><button routerLink="/modificar-trabajador">Modificar</button></td>
+      <td><button (click)="borrar(trabajador.id)">Borrar</button></td>
+    </tr>
+  </tbody>
+</table>

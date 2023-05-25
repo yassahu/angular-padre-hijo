@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { TrabajadoresComponent } from './Componentes/trabajadores/trabajadores.c
 import { HeaderComponent } from './Componentes/header/header.component';
 import { HomeComponent } from './Componentes/home/home.component';
 import { Error404Component } from './Componentes/error404/error404.component';
+import { GestionComponent } from './Componentes/gestion/gestion.component';
+import { AnyadirComponent } from './Componentes/anyadir/anyadir.component';
+import { ModificarComponent } from './Componentes/modificar/modificar.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { Error404Component } from './Componentes/error404/error404.component';
     TrabajadoresComponent,
     HeaderComponent,
     HomeComponent,
-    Error404Component
+    Error404Component,
+    GestionComponent,
+    AnyadirComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

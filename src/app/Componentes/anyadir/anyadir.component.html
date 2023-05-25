@@ -1,0 +1,6 @@
+<p>Id: <input type="text" [(ngModel)]="id"></p>
+<p>Nombre: <input type="text" [(ngModel)]="nombre"></p>
+<p>Cargo: <input type="text" [(ngModel)]="cargo"></p>
+
+<button class="btn btn-primary" (click)="anyadirTrabajador(id, nombre, cargo)">Guardar</button>
+<button class="btn btn-primary" (click)="volverAListado()">Cancelar</button>
