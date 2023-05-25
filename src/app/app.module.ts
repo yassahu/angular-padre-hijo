@@ -8,6 +8,8 @@ import { HeaderComponent } from './Componentes/header/header.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
 import { Pagina1Component } from './Componentes/pagina1/pagina1.component';
 import { Pagina2Component } from './Componentes/pagina2/pagina2.component';
+import { TrabajadoresComponent } from './Componentes/trabajadores/trabajadores.component';
+import { Error404Component } from './Componentes/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { Pagina2Component } from './Componentes/pagina2/pagina2.component';
     HeaderComponent,
     InicioComponent,
     Pagina1Component,
-    Pagina2Component
+    Pagina2Component,
+    TrabajadoresComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
