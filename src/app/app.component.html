@@ -1,13 +1,5 @@
-<h3>{{titulo}}</h3>
+<app-header></app-header>
 
-<div class="row row-cols-1 row-cols-md-6">
-  <app-card-trabajador *ngFor="let trabajador of trabajadores"
-                      [trabajador]="trabajador"
-                      (likeTrabajador)="sumaVoto($event)"
-                      (unlikeTrabajador)="restaVoto($event)"
-                      (borraTrabajador)="borrar($event)"
-  >
-  </app-card-trabajador>
-</div>
+<app-trabajadores></app-trabajadores>
 
 <router-outlet></router-outlet>
