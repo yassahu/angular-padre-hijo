@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TrabajadoresService } from '../../Servicios/trabajadores.service';
+import { Trabajador } from 'src/app/Modelos/trabajador';
 
 @Component({
   selector: 'app-trabajadores',
@@ -7,10 +8,14 @@ import { TrabajadoresService } from '../../Servicios/trabajadores.service';
   styleUrls: ['./trabajadores.component.css']
 })
 export class TrabajadoresComponent {
+  titulo = 'Listado de Trabajadores';
+  trabajadores!:Array<Trabajador>;
+
   constructor(private servicio:TrabajadoresService){}
 
-  titulo = 'Listado de Trabajadores';
-  trabajadores = this.servicio.getTrabajadores();
+  ngOnInit(){
+    this.trabajadores = this.servicio.getTrabajadores();
+  }
 
   sumaVoto(id:number){
     this.servicio.sumaVoto(id);
