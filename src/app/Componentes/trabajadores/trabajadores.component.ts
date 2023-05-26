@@ -18,21 +18,12 @@ export class TrabajadoresComponent {
     this.trabajadores = this.miServicio.getTrabajadores();
   }
 
-  sumaVoto(id:number){
-    this.miServicio.sumaVoto(id);
-  }
-
-  restaVoto(id:number){
-    this.miServicio.restaVoto(id);
-  }
 
   borrar(id:number){
     this.miServicio.borrar(id);
   }
 
-  reseteaVotos(id:number){
-    this.miServicio.resetearVotos(id);
-  }
+
 
   nuevoTrabajador(){
     alert("Nuevo trabajador");

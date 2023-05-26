@@ -14,6 +14,11 @@ export class TrabajadoresService {
     return this.trabajadores;
   }
 
+  getTrabajador(id:number){
+    let pos = this.trabajadores.findIndex(t => t.id == id);
+    return this.trabajadores[pos];
+  }
+
   borrar(id:number){
     let pos = this.trabajadores.findIndex(t => t.id == id);
     this.trabajadores.splice(pos, 1);

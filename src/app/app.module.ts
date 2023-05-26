@@ -10,6 +10,7 @@ import { Pagina1Component } from './Componentes/pagina1/pagina1.component';
 import { Pagina2Component } from './Componentes/pagina2/pagina2.component';
 import { TrabajadoresComponent } from './Componentes/trabajadores/trabajadores.component';
 import { Error404Component } from './Componentes/error404/error404.component';
+import { BorrarTrabajadorComponent } from './Componentes/borrar-trabajador/borrar-trabajador.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Error404Component } from './Componentes/error404/error404.component';
     Pagina1Component,
     Pagina2Component,
     TrabajadoresComponent,
-    Error404Component
+    Error404Component,
+    BorrarTrabajadorComponent
   ],
   imports: [
     BrowserModule,

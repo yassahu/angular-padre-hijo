@@ -2,13 +2,13 @@
 
 <button class="btn btn-primary" (click)="nuevoTrabajador()">Nuevo</button>
 
-<div class="row row-cols-1 row-cols-md-6">
-  <app-card-trabajador *ngFor="let trabajador of trabajadores"
-                      [trabajador]="trabajador"
-                      (likeTrabajador)="sumaVoto($event)"
-                      (unlikeTrabajador)="restaVoto($event)"
-                      (borraTrabajador)="borrar($event)"
-                      (reseteaVotos)="reseteaVotos($event)"
-  >
-  </app-card-trabajador>
-</div>
+<table>
+  <tr *ngFor="let trabajador of trabajadores">
+    <td>{{trabajador.id}}</td>
+    <td>{{trabajador.nombre}}</td>
+    <td>{{trabajador.cargo}}</td>
+    <td>{{trabajador.votos}}</td>
+    <td><button routerLink="/borrarTrabajador/{{trabajador.id}}">Borrar</button></td>
+    <!-- <td><button (click)="borrar(trabajador.id)">Borrar</button></td> -->
+  </tr>
+</table>
