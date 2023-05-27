@@ -6,6 +6,7 @@ import { Error404Component } from './Componentes/error404/error404.component';
 import { GestionComponent } from './Componentes/gestion/gestion.component';
 import { AnyadirComponent } from './Componentes/anyadir/anyadir.component';
 import { ModificarComponent } from './Componentes/modificar/modificar.component';
+import { DetalleTrabajadorComponent } from './Componentes/detalle-trabajador/detalle-trabajador.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "gestionar-trabajadores", component: GestionComponent },
   { path: "anyadir-trabajador", component: AnyadirComponent },
   { path: "modificar-trabajador", component: ModificarComponent },
+  { path: "detalle/:id", component: DetalleTrabajadorComponent },
   { path: "**", component: Error404Component }
 ];
 

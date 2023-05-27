@@ -12,6 +12,7 @@ import { Error404Component } from './Componentes/error404/error404.component';
 import { GestionComponent } from './Componentes/gestion/gestion.component';
 import { AnyadirComponent } from './Componentes/anyadir/anyadir.component';
 import { ModificarComponent } from './Componentes/modificar/modificar.component';
+import { DetalleTrabajadorComponent } from './Componentes/detalle-trabajador/detalle-trabajador.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModificarComponent } from './Componentes/modificar/modificar.component'
     Error404Component,
     GestionComponent,
     AnyadirComponent,
-    ModificarComponent
+    ModificarComponent,
+    DetalleTrabajadorComponent
   ],
   imports: [
     BrowserModule,

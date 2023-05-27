@@ -11,6 +11,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,7 @@
       <td>{{trabajador.votos}}</td>
       <td><button (click)="sumarVoto(trabajador.id)">+</button></td>
       <td><button (click)="restarVoto(trabajador.id)">-</button></td>
+      <td><button routerLink="/detalle/{{trabajador.id}}">Mostrar detalle</button></td>
       <td><button routerLink="/modificar-trabajador">Modificar</button></td>
       <td><button (click)="borrar(trabajador.id)">Borrar</button></td>
     </tr>

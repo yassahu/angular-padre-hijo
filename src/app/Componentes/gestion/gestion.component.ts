@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Trabajador } from 'src/app/Modelos/trabajador';
 import { TrabajadoresService } from 'src/app/Servicios/trabajadores.service';
 
@@ -10,7 +11,9 @@ import { TrabajadoresService } from 'src/app/Servicios/trabajadores.service';
 export class GestionComponent {
   trabajadores!:Array<Trabajador>
 
-  constructor(private servicio:TrabajadoresService){}
+  constructor(private servicio:TrabajadoresService,
+              private router:Router
+    ){}
 
   ngOnInit(){
     this.trabajadores = this.servicio.getTrabajadores();

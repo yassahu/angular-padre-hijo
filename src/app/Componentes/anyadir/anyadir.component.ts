@@ -25,9 +25,10 @@ export class AnyadirComponent {
       votos: 0
     }
     this.servicio.anyadirTrabajador(trabajador);
-  }
-
-  volverAListado(){
     this.router.navigate(["/gestionar-trabajadores"]);
   }
+
+  // volverAListado(){
+  //   this.router.navigate(["/gestionar-trabajadores"]);
+  // }
 }
