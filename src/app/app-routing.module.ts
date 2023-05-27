@@ -7,11 +7,13 @@ import { GestionComponent } from './Componentes/gestion/gestion.component';
 import { AnyadirComponent } from './Componentes/anyadir/anyadir.component';
 import { ModificarComponent } from './Componentes/modificar/modificar.component';
 import { DetalleTrabajadorComponent } from './Componentes/detalle-trabajador/detalle-trabajador.component';
+import { guarda1Guard } from './Guards/guarda1.guard';
+import { Prueba2Guard } from './Guards/prueba2.guard';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "trabajadores", component: TrabajadoresComponent },
-  { path: "gestionar-trabajadores", component: GestionComponent },
+  { path: "trabajadores", canActivate:[Prueba2Guard], component: TrabajadoresComponent },
+  { path: "gestionar-trabajadores", canActivate:[guarda1Guard], component: GestionComponent },
   { path: "anyadir-trabajador", component: AnyadirComponent },
   { path: "modificar-trabajador", component: ModificarComponent },
   { path: "detalle/:id", component: DetalleTrabajadorComponent },
